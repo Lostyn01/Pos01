@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:android2="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:showAsAction="ifRoom"
+        android2:id="@+id/opcoes"
+        android2:title="OPÇÕES"/>
+
+    <item
+        android:showAsAction="ifRoom"
+        android2:id="@+id/opcoes2"
+        android2:title="OPÇÕES2"/>
+
+
+</menu>

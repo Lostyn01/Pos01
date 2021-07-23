@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/quantidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="SERÁ IMPRIMIDO: "
+                android:textColor="#000"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="PATATI BINGO"
+                android:textColor="#000"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/imprimir"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:text="IMPRIMIR"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shapelinear2"
+                    android:layout_weight="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <Button
+                    android:id="@+id/desistir"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:text="DESISTIR"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/shapelinear5"
+                    android:layout_weight="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnPrint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print Hello World"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnPrintImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print images"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnPrint" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnPiarUnpair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnPrintImages" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnCustomPrinter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom printer (woosim)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnPiarUnpair" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Click to print !" />
+
+        <Button
+            android:id="@+id/button_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Print by bluetooth !" />
+
+        <Button
+            android:id="@+id/button_usb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Print by USB !" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="IP :" />
+
+            <EditText
+                android:id="@+id/edittext_tcp_ip"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:text="Port :" />
+
+            <EditText
+                android:id="@+id/edittext_tcp_port"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_tcp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Print by TCP !" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/activity_loading"/>
+    </RelativeLayout>
+
+</RelativeLayout>
